@@ -8,11 +8,11 @@ describe('Phone Validator', () => {
 
   it('should return true', () => {
     const control = new FormControl('2037330596');
-    expect(phone('US')(control)).toEqual(error);
+    expect(phone('US')(control)).toBeNull();
   });
 
   it('should return false', () => {
     const control = new FormControl('203730596');
-    expect(phone('US')(control)).toBeNull();
+    expect(phone('US')(control)).toEqual(error);
   });
 });
