@@ -14,8 +14,8 @@ export const password = (config: Config = {uppercase: true, lowercase: true, spe
     const map = {
       uppercase: upperCaseCharacters.test(value),
       lowercase: lowerCaseCharacters.test(value),
-      numberCharacters: numberCharacters.test(value),
-      specialCharacters: specialCharacters.test(value)
+      number: numberCharacters.test(value),
+      specialChar: specialCharacters.test(value)
     };
 
     const filteredConfig = Object.keys(config).filter((key) => {
