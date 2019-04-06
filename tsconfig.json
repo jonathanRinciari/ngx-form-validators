@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-form-validators": [
+        "dist/ngx-form-validators"
+      ],
+      "ngx-form-validators/*": [
+        "dist/ngx-form-validators/*"
+      ]
+    }
   }
 }

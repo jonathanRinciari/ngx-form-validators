@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-form-validators": {
+      "root": "projects/ngx-form-validators",
+      "sourceRoot": "projects/ngx-form-validators/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-form-validators/tsconfig.lib.json",
+            "project": "projects/ngx-form-validators/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-form-validators/src/test.ts",
+            "tsConfig": "projects/ngx-form-validators/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-form-validators/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-form-validators/tsconfig.lib.json",
+              "projects/ngx-form-validators/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "demo"
