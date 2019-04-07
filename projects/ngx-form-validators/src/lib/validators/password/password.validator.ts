@@ -1,5 +1,11 @@
 import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
+export interface Config {
+  uppercase?: boolean;
+  lowercase?: boolean;
+  specialChar?: boolean;
+  number?: boolean;
+}
 
 export const password = (config: Config = {uppercase: true, lowercase: true, specialChar: true, number: true}): ValidatorFn => {
   return (control: AbstractControl): { [key: string]: boolean } => {
@@ -34,10 +40,3 @@ export const password = (config: Config = {uppercase: true, lowercase: true, spe
       return result ? null : { password: true };
   };
 };
-
-interface Config {
-  uppercase?: boolean;
-  lowercase?: boolean;
-  specialChar?: boolean;
-  number?: boolean;
-}
