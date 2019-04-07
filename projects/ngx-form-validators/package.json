@@ -4,5 +4,8 @@
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
+  },
+  "dependencies": {
+    "libphonenumber-js": "^1.7.15"
   }
 }
