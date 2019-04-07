@@ -1,5 +1,5 @@
-import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { isValidNumber, NationalNumber, ParsedNumber, CountryCode } from 'libphonenumber-js';
+import { AbstractControl, ValidatorFn, Validators } from '@angular/forms';
+import { isValidNumber, ParsedNumber, CountryCode } from 'libphonenumber-js';
 
 
 
